@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for you my babyy </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .heart {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .message-box {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-red-100 min-h-screen flex flex-col items-center justify-center font-sans p-6">
+    <div class="heart text-red-400 text-8xl mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-24 h-24">
+            <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+        </svg>
+    </div>
+
+    <div class="message-box max-w-2xl w-full rounded-2xl shadow-xl overflow-hidden animate__animated animate__fadeInUp">
+        <div class="bg-red-500 text-white py-4 px-6">
+            <h1 class="text-3xl font-bold text-center">to someone very special and important to me</h1>
+        </div>
+        
+        <div class="bg-white p-6 md:p-10 text-gray-800">
+            <div class="mb-8 text-center">
+                <img src="luh.jpg" alt="Drawing of a couple holding hands under moonlight in a romantic setting" class="w-full h-auto rounded-lg mb-6"/>
+            </div>
+            
+            <div class="prose prose-red mx-auto">
+                <p class="text-lg mb-4 font-medium">my dearest babyy,</p>
+                
+                <p class="mb-4"> i just want to tell you how much you mean to me and how deeply sorry i am for all the times i fell short of being the person you deservee. i know there were moments i disappointed you, made you doubt my love, or made you feel unappreciated. esp, last-last night. and i truly hate myself for letting that happen because you are so important to mee. i want you to know that i hear you, i understand where i went wrong, and
+i'm committed to doing better, not just for you, but for us. i don't ever want you to feel like you're not valued, or that your feelings are being ignored. from now on, i promise to be more patient, more understanding, and more present.</p>
+                
+                <p class="mb-4">i can't change what happened, but what i can do is promise you this. i see how my actions affected you, i understand why you're upset, and i'm committing to doing better.</p>
+                
+                <div class="my-6 p-4 bg-red-50 rounded-lg">
+                    <p class="text-center text-red-700 italic font-medium">"You deserve the world, and I'm sorry for any moment I made you feel like less than the amazing person you are."</p>
+                </div>
+                
+                <p class="mb-4">i'll work on my flaws, i'll show up for you consistently, and i'll make sure you feel secure in my love. this isn't just empty words, i'll prove it through my actions. i'll be more thoughtful, more careful with my words, and more attentive to your needs. i'll remind you every day how beautiful, amazing, and loved you are. i'll make sure you never have to question how important you are to me again. thank you for still being here despite my shortcomings. thank you for giving me another chance to show you that i can be the person you hoped for. i promise, with all my heart, i'll do everything i can to make you happy and to make this relationship stronger than ever.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-10 grid grid-cols-2 gap-4 w-full max-w-md">
+        <button id="flower" class="btn-hover bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-4 rounded-full transition-all duration-300 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            Flowers for You
+        </button>
+    </div>
+    
+    <div class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none" id="flowerAnimation"></div>
+    
+    <script>
+        // Flower animation
+        document.getElementById('flower').addEventListener('click', function() {
+            const container = document.getElementById('flowerAnimation');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const flower = document.createElement('div');
+                    flower.className = 'absolute text-pink-400 text-3xl animate__animated animate__fadeOutUp';
+                    flower.style.left = `${Math.random() * 100}%`;
+                    flower.style.top = `${Math.random() * 100}%`;
+                    flower.style.opacity = '0.7';
+                    flower.style.fontSize = `${Math.random() * 20 + 10}px`;
+                    flower.innerHTML = '🌸';
+                    container.appendChild(flower);
+                }, i * 200);
+            }
+        });
+    </script>
+</body>
+</html>
